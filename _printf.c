@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _printf - implementation of the inbult printf
- * @format: the format specifier
+ * _printf - implementation of the inbuilt printf
+ * @format: the formated string
  * Return: the formated string
  */
 
@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int printed = 0;
 
-	va_list argss;
+	va_list args;
 
 	va_start(args, format);
 
@@ -32,4 +32,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (printed);
 }
-

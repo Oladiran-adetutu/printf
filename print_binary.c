@@ -2,14 +2,14 @@
 
 /**
  * printf_binary - prints a binary number
- * @num: number arguements
- * @printed: the printed characters
- * Return: printee characters
+ * @num: number arguement
+ * @printed: the printed character
+ * Return: printed characters
  */
 
 int printf_binary(unsigned int num, int printed)
 {
-	int binary[32] = {0};
+	int binary [32] = {0};
 	int i = 0;
 
 	if (num == 0)

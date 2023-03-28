@@ -7,16 +7,16 @@
 #include <limits.h>
 
 int _putchar(char character);
-int printf_char(va_list args, int printed);
-int printf_string(va_list args, int printed);
-int printf_integer(va_list args, int printed);
-int selector(const char *format, va_list args, int printed);
-int printf_binary(unsigned int num, int printed);
+int printf_char(va_list args, int print);
+int printf_str(va_list args, int print);
+int printf_int(va_list args, int print);
+int select(const char *format, va_list args, int print);
+int printf_binary(unsigned int num, int print);
 int _printf(const char *format, ...);
-int _x(unsigned int num, int printed, int uppercase);
-int printf_octal(unsigned int num, int printed);
-int printf_unsigned(unsigned int num, int printed);
-int printf_reverse(va_list args, int printed);
-int printf_pointer(va_list args, int printed);
+int _q(unsigned int num, int print, int uppercase);
+int printf_octal(unsigned int num, int print);
+int printf_unsigned(unsigned int num, int print);
+int printf_rev(va_list args, int print);
+int printf_points(va_list args, int print);
 
 #endif

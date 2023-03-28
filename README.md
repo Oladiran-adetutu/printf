@@ -1,1 +1,1 @@
-Readme for a collaborative project at the semi-final stage of the printf project in c programming language
+Readme for a group project named printf using C prog language

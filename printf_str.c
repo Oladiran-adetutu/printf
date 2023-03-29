@@ -15,7 +15,7 @@ int printf_str(va_list args, int print)
 	{
 		_putchar(*str);
 		print++;
-		string++;
+		str++;
 	}
 	return (print);
 }

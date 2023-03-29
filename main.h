@@ -11,7 +11,7 @@ int printf_char(va_list args, int print);
 int printf_str(va_list args, int print);
 int printf_int(va_list args, int print);
 int select(const char *format, va_list args, int print);
-int printf_binary(unsigned int num, int print);
+int printf_binary(unsigned int num);
 int _printf(const char *format, ...);
 int _q(unsigned int num, int print, int uppercase);
 int printf_octal(unsigned int num, int print);

@@ -5,8 +5,19 @@
  * @args: arguements
  * @print: the characters printed
  * @format: the format specified
+ * _putchar: puts characters
+ * printf_binary: prints binary
+ * printf_char: prints characters
+ * printf_str: prints string
+ * printf_int: prints integers
+ * _printf: prints variables
+ * _q: uppercase variables
+ * printf_unsigned: prints unsigned variables
+ * printf_rev: prints in reverse
+ * printf_points: prints pointer
  * Return: characters that are printed
  */
+
 
 int select(const char *format, va_list args, int print)
 {
@@ -14,14 +25,14 @@ int select(const char *format, va_list args, int print)
 	{
 		case 'd':
 		case 'i':
-			print = printf_integer(args, print);
+			print = printf_int(args, print);
 			break;
 		case 'c':
 			_putchar(va_arg(args, int));
 			print++;
 			break;
 		case 's':
-			print = printf_string(args, print);
+			print = printf_str(args, print);
 			break;
 		case '%':
 			_putchar('%');
@@ -32,7 +43,7 @@ int select(const char *format, va_list args, int print)
 			break;
 		case 'x':
 		case 'X':
-			print = _x(va_arg(args, unsigned int), print, (*format == 'X') ? 1 : 0);
+			print = _q(va_arg(args, unsigned int), print, (*format == 'X') ? 1 : 0);
 			break;
 		case 'o':
 			print = printf_octal(va_arg(args, unsigned int), print);
@@ -49,5 +60,5 @@ int select(const char *format, va_list args, int print)
 		default:
 			break;
 	}
-	return (printed);
+	return (print);
 }

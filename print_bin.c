@@ -9,7 +9,7 @@
  */
 int print_bin(char *buff_dest, va_list arg, int buff_count)
 {
-	unsigned int number = va_arg(arg unsigned int);
+	unsigned int number = va_arg(arg, unsigned int);
 	unsigned int tmp = number;
 	int bin = 1;
 

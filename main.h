@@ -1,22 +1,40 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
+#define INT_BITS (4 * 8)
 
-#include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include <limits.h>
 
-int _putchar(char character);
-int printf_char(va_list args, int print);
-int printf_str(va_list args, int print);
-int printf_int(va_list args, int print);
-int select(const char *format, va_list args, int print);
-int printf_binary(unsigned int num, int print);
+/**
+ * struct call - structure calls
+ * @t: t - data type
+ * @f: function that is assocated
+ *
+ */
+typedef struct call
+{
+	char t;
+	int (*f)(char *, va_list, int);
+} call_t;
+
 int _printf(const char *format, ...);
-int _q(unsigned int num, int print, int uppercase);
-int printf_octal(unsigned int num, int print);
-int printf_unsigned(unsigned int num, int print);
-int printf_rev(va_list args, int print);
-int printf_points(va_list args, int print);
+int buff_append(char *buff_dest, va_list arg, int buff_count, char type);
+int print_buff(char *buff, unsigned int nbuff);
+int str_len(char *s);
+char *_strcpy(char *dest, char *src);
+int print_char(char *buff_dest, va_list arg, int buff_count);
+int print_str(char *buff_dest, va_list arg, int buff_count);
+int print_int(char *buff_dest, va_list list, int buff_count);
+int print_perc(char *buff_dest, va_list arg, int buff_count);
+int print_bin(char *buff_dest, va_list arg, int buff_count);
+int print_oct(char *buff_dest, va_list arg, int buff_count);
+int print_hex(char *buff_dest, va_list arg, int buff_count);
+int print_X(char *buff_dest, va_list arg, int buff_count);
+int print_unint(char *buff_dest, va_list arg, int buff_count);
+int print_rev(char *buff_dest, va_list arg, int buff_count);
+int print_Rot13(char *buff_dest, va_list arg, int buff_count);
 
 #endif

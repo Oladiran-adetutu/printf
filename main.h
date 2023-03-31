@@ -33,8 +33,8 @@ int print_bin(char *buff_dest, va_list arg, int buff_count);
 int print_oct(char *buff_dest, va_list arg, int buff_count);
 int print_hex(char *buff_dest, va_list arg, int buff_count);
 int print_X(char *buff_dest, va_list arg, int buff_count);
-int print_uint(char *buff_dest, va_list arg, int buff_count);
+int print_unint(char *buff_dest, va_list arg, int buff_count);
 int print_rev(char *buff_dest, va_list arg, int buff_count);
-int print_R13(char *buff_dest, va_list arg, int buff_count);
+int print_Rot13(char *buff_dest, va_list arg, int buff_count);
 
 #endif

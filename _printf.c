@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	call_t container[] = {
 		{'c', print_char}, {'s', print_str}, {'i', print_int}, {'d', print_int},
 		{'%', print_perc}, {'b', print_bin}, {'o', print_oct}, {'x', print_hex},
-		{'X', print_X}, {'u', print_uint}, {'R', print_R13}, {'r', print_rev},
+		{'X', print_X}, {'u', print_unint}, {'R', print_Rot13}, {'r', print_rev},
 		{'\0', NULL}
 	};
 
